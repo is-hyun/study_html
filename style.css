@@ -1,2 +1,74 @@
 :root {
+  --nt-menu-text: #191919;
+  --nt-black-text: #0d0d0d;
+  --nt-gray-text: #777777;
+  --nt-lightgray: #a49e98;
+
+  --nt-blue: #0075de;
+  --nt-blue-hover: #025bab;
+  --nt-lightblue: #e6f3fe;
+
+  --nt-card: #f9f9f8;
+
+  --nt-icon-red: #f74932;
+  --nt-icon-blue: #0d7fe8;
+  --nt-icon-yellow: #ffb10e;
+  --nt-icon-deepblue: #1213ba;
+  --nt-icon-green: #19ae39;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--nt-black-text);
+}
+a {
+  text-decoration: none;
+  color: var(--nt-black-text);
+}
+header {
+  background-color: red;
+  color: var(--nt-menu-text);
+  width: 100vw;
+  height: 64px;
+
+  padding: 15px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+.nav {
+  width: 312px;
+  display: flex;
+  /* gap: 21px; */
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: 400;
+}
+.nav a {
+  color: var(--nt-menu-text);
+}
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hd-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
