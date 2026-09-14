@@ -1,0 +1,61 @@
+{
+  // --- 화면 및 글꼴 크기 설정 ---
+  
+  // 에디터 창의 코드 글자 크기를 설정합니다. (기본값 14)
+  "editor.fontSize": 16,
+  
+  // 네비게이션(탐색기)을 포함한 VSCode 전체 화면의 확대 비율을 설정합니다.
+  // 1은 약 20% 확대, 2는 약 40% 확대를 의미하며 0이 기본값입니다.
+  "window.zoomLevel": 0,
+
+
+  // --- Live Server (실시간 미리보기) 관련 설정 ---
+  
+  // 브라우저를 띄울 때 사용할 기본 포트 번호를 5500으로 지정합니다.
+  "liveServer.settings.port": 5501,
+  
+  // 오른쪽 아래에 자잘하게 뜨는 Live Server 알림 메시지를 숨겨서 화면을 깔끔하게 씁니다.
+  "liveServer.settings.donotShowInfoMsg": true,
+  
+  // 크롬 브라우저 디버깅용 창이 뜨는 것을 방지합니다.
+  "liveServer.settings.ChromeDebuggingAttachment": false,
+
+
+  // --- Prettier (코드 자동 정렬) 관련 설정 ---
+  // 아래는 HTML, CSS, JavaScript 파일 각각에 대해 코드 정렬 규칙을 적용합니다.
+
+  "[html]": {
+    // HTML 코드를 예쁘게 정리해 줄 기본 프로그램을 Prettier로 지정합니다.
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // HTML 파일을 저장할 때마다 자동으로 코드를 보기 좋게 정렬합니다.
+    "editor.formatOnSave": true,
+    // HTML 파일에서 키보드 Tab 키를 누를 때, 스페이스바 2칸 간격으로 들여쓰기를 맞춥니다.
+    "editor.tabSize": 2
+  },
+
+  "[css]": {
+    // CSS 코드 역시 예쁘게 정리해 줄 기본 프로그램을 Prettier로 지정합니다.
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // CSS 파일을 저장할 때마다 자동으로 코드를 보기 좋게 정렬합니다.
+    "editor.formatOnSave": true,
+    // CSS 파일에서 키보드 Tab 키를 누를 때, 스페이스바 2칸 간격으로 들여쓰기를 맞춥니다.
+    "editor.tabSize": 2
+  },
+
+  "[javascript]": {
+    // 자바스크립트 코드 또한 예쁘게 정리해 줄 기본 프로그램을 Prettier로 지정합니다.
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // 자바스크립트 파일을 저장할 때마다 자동으로 코드를 보기 좋게 정렬합니다.
+    "editor.formatOnSave": true,
+    // 자바스크립트 파일에서 키보드 Tab 키를 누를 때, 스페이스바 2칸 간격으로 들여쓰기를 맞춥니다.
+    "editor.tabSize": 2
+  },
+
+
+  // --- Emmet (코드 자동 완성) 관련 설정 ---
+  
+  // 일반 자바스크립트 파일 안에서도 HTML 태그 자동 완성 기능을 사용할 수 있게 허용해 줍니다.
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
+}
