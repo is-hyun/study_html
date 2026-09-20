@@ -30,25 +30,30 @@ a {
   text-decoration: none;
   color: var(--nt-black-text);
 }
+/* 헤더 */
 header {
   background-color: red;
   color: var(--nt-menu-text);
   width: 100vw;
   height: 64px;
 
-  padding: 15px;
+  padding: 15px 24px;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+
+  /* nav 중앙 정렬 */
+  position: relative;
 }
 .logo {
   display: flex;
   align-items: center;
 }
 .logo img {
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
 }
 .nav {
   width: 312px;
@@ -57,18 +62,40 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  font-weight: 400;
-}
-.nav a {
-  color: var(--nt-menu-text);
+  /* 화면 중앙 정렬 */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .nav-menu {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 6px;
+
+  color: var(--nt-menu-text);
+  font-size: 15px;
+  font-weight: 400;
 }
 .hd-right {
   display: flex;
-  gap: 10px;
+  gap: 21px;
+  align-items: center;
+
+  color: var(--nt-menu-text);
+  font-size: 15px;
+  font-weight: 400;
+}
+.hd-right button {
+  background-color: var(--nt-blue);
+  border: none;
+  border-radius: 8px;
+  padding: 6px 15px;
+}
+.hd-btn {
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
   align-items: center;
 }
