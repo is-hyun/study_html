@@ -1,0 +1,97 @@
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 81px;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  width: 1252px;
+  height: 300px;
+  margin: 0 auto;
+}
+.ft-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 213px;
+}
+/*  */
+.ft-logo {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.ft-logo img {
+  display: block;
+  width: 39px;
+  height: 39px;
+}
+.ft-text {
+  font-family: "Lyon Text", Georgia, "바탕체";
+}
+.ft-inter {
+  font-size: 18px;
+}
+.ft-inter-info {
+  margin-top: 15px;
+  color: var(--nt-gray-text);
+  font-size: 15px;
+}
+
+.ft-right {
+  flex: 2;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ft-right-top {
+  display: flex;
+  gap: 80px;
+  justify-content: space-between;
+  width: 100%;
+}
+.frt-1,
+.frt-2 {
+  display: flex;
+  gap: 80px;
+  flex: 1;
+  min-width: 0;
+}
+.ft-lists {
+  flex: 1;
+}
+.list-title {
+  color: var(--nt-gray-text);
+  font-size: 12px;
+  padding: 0 0 6px 6px;
+  /* margin-bottom: 6px; */
+}
+.ft-list {
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+}
+.ft-list p {
+  padding: 0 0 6px 6px;
+  font-weight: 500;
+}
+.ft-more {
+  padding: 0 0 6px 6px;
+  color: var(--nt-gray-text);
+  font-weight: 500;
+}
+.ft-right-bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 51px;
+  align-items: center;
+  padding: 0 0 6px 6px;
+  color: var(--nt-gray-text);
+}

@@ -32,7 +32,7 @@ a {
 }
 /* 헤더 */
 header {
-  background-color: red;
+  /* background-color: red; */
   color: var(--nt-menu-text);
   width: 100vw;
   height: 64px;
@@ -76,6 +76,11 @@ header {
   color: var(--nt-menu-text);
   font-size: 15px;
   font-weight: 400;
+}
+.nav-toggle {
+  font-size: 15px;
+  font-weight: 400px;
+  transform: rotate(-90deg) scaleY(2) translateX(-2px);
 }
 .hd-right {
   display: flex;

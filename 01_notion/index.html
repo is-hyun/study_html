@@ -6,6 +6,7 @@
     <title>Notion</title>
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="footer.css" />
   </head>
   <body>
     <header>
@@ -15,11 +16,11 @@
       <div class="nav">
         <div class="nav-menu">
           <p>제품</p>
-          <span class="nav-toggle">▼</span>
+          <span class="nav-toggle">&lt;</span>
         </div>
         <div class="nav-menu">
           <p>리소스</p>
-          <span class="nav-toggle">▼</span>
+          <span class="nav-toggle">&lt;</span>
         </div>
         <a class="nav-menu" href="#">가격</a>
         <a class="nav-menu" href="#">영업팀 문의하기</a>
@@ -43,9 +44,7 @@
             <h1>하는 곳</h1>
           </div>
         </div>
-        <p class="mt-p">
-          팀을 위해 구축된 AI로 맥락을 파악하고, 답을 찾고, 작업을 자동화하세요
-        </p>
+        <p class="mt-p">팀을 위해 구축된 AI로 맥락을 파악하고, 답을 찾고, 작업을 자동화하세요</p>
         <div class="mh-buttons">
           <button class="btn1"><a href="#">Notion 무료로 사용하기</a></button>
           <button class="btn2"><a href="#">데모 요청하기</a></button>
@@ -53,13 +52,7 @@
       </div>
 
       <div class="main-v">
-        <video
-          src="../notion_icons/main_video.mp4"
-          autoplay
-          loop
-          muted
-          playsinline
-        ></video>
+        <video src="../notion_icons/main_video.mp4" autoplay loop muted playsinline></video>
       </div>
       <div class="main-c">
         <p>가장 야심찬 기업들이 Notion을 사용하고 있습니다.</p>
@@ -69,10 +62,7 @@
             <span class="company-dot">●</span>
           </div>
           <div class="company">
-            <img
-              src="../notion_icons/company/2. kakaostyle.svg"
-              alt="kakaostyle"
-            />
+            <img src="../notion_icons/company/2. kakaostyle.svg" alt="kakaostyle" />
             <span class="company-dot">●</span>
           </div>
           <div class="company">
@@ -88,10 +78,7 @@
             <span class="company-dot">●</span>
           </div>
           <div class="company">
-            <img
-              src="../notion_icons/company/6. devsisters.svg"
-              alt="devsisters"
-            />
+            <img src="../notion_icons/company/6. devsisters.svg" alt="devsisters" />
             <span class="company-dot">●</span>
           </div>
           <div class="company">
@@ -141,63 +128,65 @@
         <h2 class="ai-title">팀 업무 공간에서 바로 쓰는 AI</h2>
         <div class="cards">
           <div class="card">
-            <span class="card-title">지식 수집</span>
+            <p class="card-title">지식 수집</p>
             <div class="card-desc">
               <h2>모든 것을 하나의 기록 시스템으로 통합하세요.</h2>
-              <span class="card-btn">→</span>
+              <span class="card-btn">&#10132;</span>
             </div>
             <div class="card-img">
               <img class="ci-1" src="../notion_icons/card_img/knowledge/1.webp" alt="1" />
-              <img class="ci-2" src="../notion_icons/card_img/knowledge/2.webp" alt="2" />
+              <img class="ci-1" src="../notion_icons/card_img/knowledge/2.webp" alt="2" />
               <img class="ci-3" src="../notion_icons/card_img/knowledge/3.webp" alt="3" />
             </div>
           </div>
           <div class="card">
-            <span class="card-title">답변 검색</span>
+            <p class="card-title">답변 검색</p>
             <div class="card-desc">
               <h2>출처가 포함된 답변을 즉시 확인하세요.</h2>
-              <span class="card-btn">→</span>
+              <span class="card-btn">&#10132;</span>
             </div>
             <div class="card-img">
-              <img src="../notion_icons/card_img/answer/1.webp" alt="1" />
-              <img src="../notion_icons/card_img/answer/2.webp" alt="2" />
-              <img src="../notion_icons/card_img/answer/3.webp" alt="3" />
+              <img class="ci-1" src="../notion_icons/card_img/answer/1.webp" alt="1" />
+              <img class="ci-4" src="../notion_icons/card_img/answer/2.webp" alt="2" />
+              <img class="ci-3" src="../notion_icons/card_img/answer/3.webp" alt="3" />
             </div>
           </div>
         </div>
         <div class="card third">
-          <span class="card-title">번거로운 작업 자동화</span>
-          <div class="card-desc">
-            <h2>에이전트를 사용해 24시간 연중무휴 업무를 처리하세요.</h2>
-            <span class="card-btn">→</span>
+          <div class="third-text">
+            <p class="card-title">번거로운 작업 자동화</p>
+            <div class="third-desc">
+              <h2>에이전트를 사용해 24시간 연중무휴 업무를 처리하세요.</h2>
+              <p class="card-btn">&#10132;</p>
+            </div>
           </div>
-          <div class="card-img">
-            <img src="../notion_icons/card_img/auto/1.webp" alt="1" />
-            <img src="../notion_icons/card_img/auto/2.webp" alt="2" />
+          <div class="third-img">
+            <img class="ti-1" src="../notion_icons/card_img/auto/1.webp" alt="1" />
+            <img class="ti-2" src="../notion_icons/card_img/auto/2.webp" alt="2" />
           </div>
         </div>
         <div class="works">
           <p>Notion으로 할 수 있는 작업 보기</p>
-          <div>
+          <div class="work-card">
             <div class="work">
               <div class="work-icon blue"></div>
-              <a class="work-link" href="#">제품 피드백 분류 →</a>
+              <a class="work-link" href="#">제품 피드백 분류 &#10132;</a>
             </div>
             <div class="work">
               <div class="work-icon yellow"></div>
-              <a class="work-link" href="#">Slack에서 지원 티켓 해결 →</a>
+              <a class="work-link" href="#">Slack에서 지원 티켓 해결 &#10132;</a>
             </div>
             <div class="work">
               <div class="work-icon red"></div>
-              <a class="work-link" href="#">보안 경고에 더 빠르게 대응 →</a>
+              <a class="work-link line" href="#">보안 경고에 더 빠르게 대응 &#10132;</a>
             </div>
             <div class="work">
               <div class="work-icon green"></div>
-              <a class="work-link" href="#">주간 리포트 작업 자동화 →</a>
+              <a class="work-link" href="#">주간 리포트 작업 자동화 &#10132;</a>
             </div>
             <div class="work">
               <div class="work-icon deepblue"></div>
-              <a class="work-link" href="#">나만의 개발자 도구 만들기 →</a>
+              <a class="work-link" href="#">나만의 개발자 도구 만들기 &#10132;</a>
             </div>
           </div>
         </div>
@@ -208,12 +197,13 @@
           <div class="team-card">
             <img src="../notion_icons/people/cursor.webp" alt="인물" />
             <div class="team-bg red"></div>
+            <div class="team-bg2 red"></div>
             <div class="team-desc">
               <img src="../notion_icons/people/Cursor_white.svg" alt="로고" />
               <div class="team-desc-text">
                 <p class="interview">
-                  "Notion 같은 AI네이티브 툴은 중요한 경쟁력이 되어 줍니다. 작은
-                  규모를 유지하면서도 더 많은 성과를 낼 수 있으니까요."
+                  "Notion 같은 AI네이티브 툴은 중요한 경쟁력이 되어 줍니다. 작은 규모를 유지하면서도 더 많은
+                  성과를 낼 수있으니까요."
                 </p>
                 <p class="interview-info">Michael Truell, 공동 창업자 겸 CEO</p>
               </div>
@@ -222,31 +212,28 @@
           <div class="team-card">
             <img src="../notion_icons/people/faire.webp" alt="인물" />
             <div class="team-bg blue"></div>
+            <div class="team-bg2 blue"></div>
             <div class="team-desc">
-              <img
-                src="../notion_icons/people/Company_faire_white.svg"
-                alt="로고"
-              />
+              <img src="../notion_icons/people/Company_faire_white.svg" alt="로고" />
               <div class="team-desc-text">
                 <p class="interview">
-                  "Notion 같은 세심한 디자인은 협업과 의사결정을 가속화하여
-                  고객에게 더 빠르게 영향을 미칠 수 있도록 해줍니다."
+                  "Notion의 세심한 디자인은 협업과 의사결정을 가속화하여 고객에게 더 빠르게 영향을 미칠 수
+                  있도록 해줍니다."
                 </p>
-                <p class="interview-info">
-                  Renee Solorzano, 시니어 제품 디자인 이사
-                </p>
+                <p class="interview-info">Renee Solorzano, 시니어 제품 디자인 이사</p>
               </div>
             </div>
           </div>
           <div class="team-card">
             <img src="../notion_icons/people/ramp.webp" alt="인물" />
             <div class="team-bg yellow"></div>
+            <div class="team-bg2 yellow"></div>
             <div class="team-desc">
               <img src="../notion_icons/people/ramp_white.svg" alt="로고" />
               <div class="team-desc-text">
                 <p class="interview">
-                  "Notion 커스텀 에이전트는 팀이 AI로 작업을 하는 것을 넘어 팀을
-                  대신해 작업하는 AI 도구를 구축하도록 돕습니다."
+                  "Notion 커스텀 에이전트는 팀이 AI로 작업을 하는 것을 넘어 팀을 대신해 작업하는 AI 도구를
+                  구축하도록 돕습니다."
                 </p>
                 <p class="interview-info">Ben Levick, 운영 및 내부 AI 책임자</p>
               </div>
@@ -261,43 +248,84 @@
         <div><p>Fortune 100대 기업 중 62%가 Notion 사용</p></div>
         <div><p>G2의 지식 베이스 부문에서 3년 연속 1위 달성</p></div>
       </div>
-      <div>
-        <h3>지금 시작하세요</h3>
-        <div class="bottom-btns">
-          <button class="bbtn-1"><a href="#">Notion 무료로 사용</a></button>
-          <button class="bbtn-2"><a href="#">데모 요청하기</a></button>
-        </div>
-      </div>
     </main>
-    <!-- 푸터 -->
-    <!--
-    <footer>
-      <div class="ft-area1">
-        <div class="ft-logo">
-          <img src="../notion_icons/notion_logo.png" alt="#" />
-          <span>Notion</span>
-        </div>
-        <div class="ft-text">
-          <p class="ft-inter">"우리는 도구를 만들고, 그 후에는 도구가 우리를 만듭니다."</p>
-          <p class="ft-inter-info">Marshall McLuhan</p>
-        </div>
+    <section class="start">
+      <h3>지금 시작하세요.</h3>
+      <div class="bottom-btns">
+        <button class="bbtn-1"><a href="#">Notion 무료로 사용</a></button>
+        <button class="bbtn-2"><a href="#">데모 요청하기</a></button>
       </div>
-      <div class="ft-area2">
-        <div class="ft-lists">
-          <p class="ft-list-title">제품</p>
-          <div class="ft-list">
-            <p>기능</p>
-            <p>새로운 소식</p>
-            <p>Notion AI</p>
-            <p>가격</p>
-            <p>영업팀 문의하기</p>
-            <p>다운로드</p>
+    </section>
+    <!-- 푸터 -->
+    <footer>
+      <div class="footer">
+        <div class="ft-left">
+          <div class="ft-logo">
+            <img src="../notion_icons/notion_logo.png" alt="#" />
+            <span>Notion</span>
           </div>
-          <a class="ft-more" href=""></a>
+          <div class="ft-text">
+            <p class="ft-inter">"우리는 도구를 만들고,</p>
+            <p class="ft-inter">그 후에는 도구가 우리를 만듭니다."</p>
+            <p class="ft-inter-info">Marshall McLuhan</p>
+          </div>
         </div>
-        <div></div>
+        <div class="ft-right">
+          <div class="ft-right-top">
+            <div class="frt-1">
+              <div class="ft-lists">
+                <p class="list-title">제품</p>
+                <div class="ft-list">
+                  <p>기능</p>
+                  <p>새로운 소식</p>
+                  <p>Notion AI</p>
+                  <p>가격</p>
+                  <p>영업팀 문의하기</p>
+                  <p>다운로드</p>
+                  <a class="ft-more" href="">더 살펴보기 &#10132;</a>
+                </div>
+              </div>
+              <div class="ft-lists">
+                <p class="list-title">리소스</p>
+                <div class="ft-list">
+                  <p>고객 스토리</p>
+                  <p>연결</p>
+                  <p>마켓플레이스</p>
+                  <p>도움말 센터</p>
+                  <p>아카데미</p>
+                  <p>커뮤니티</p>
+                </div>
+              </div>
+            </div>
+            <div class="frt-2">
+              <div class="ft-lists">
+                <p class="list-title">회사 소개</p>
+                <div class="ft-list">
+                  <p>Notion 소개</p>
+                  <p>채용</p>
+                  <p>보안</p>
+                  <p>서비스 상태</p>
+                  <p>이용약관 및 개인정보 보호정책</p>
+                  <p>개인정보 보호 권한</p>
+                </div>
+              </div>
+              <div class="ft-lists">
+                <p class="list-title">용도별</p>
+                <div class="ft-list">
+                  <p>회사</p>
+                  <p>소규모 비즈니스</p>
+                  <p>스타트업</p>
+                  <p>개발자</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ft-right-bottom">
+            <p>&copy; 2026 Notion Labs, Inc.</p>
+            <p>쿠키 설정</p>
+          </div>
+        </div>
       </div>
     </footer>
-    -->
   </body>
 </html>
