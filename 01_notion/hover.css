@@ -1,0 +1,26 @@
+:root {
+  --nt-hover: #f2f2f2;
+  --nt-lightblue-hover: #f2f9ff;
+}
+.nav-menu:hover {
+  background-color: var(--nt-hover);
+  .nav-toggle {
+    transform: rotate(90deg) scaleY(1.2) scaleX(0.7) translateX(1px);
+  }
+}
+/* 로그아웃하기 */
+.login:hover {
+  background-color: var(--nt-hover);
+}
+.hd-right button:hover {
+  background-color: var(--nt-blue-hover);
+}
+
+.btn1:hover {
+  background-color: var(--nt-blue-hover);
+  cursor: pointer;
+}
+.btn2:hover {
+  background-color: var(--nt-lightblue-hover);
+  cursor: pointer;
+}

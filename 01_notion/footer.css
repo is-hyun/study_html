@@ -81,8 +81,10 @@ footer {
 .ft-list p {
   padding: 0 0 6px 6px;
   font-weight: 500;
+  word-break: keep-all;
 }
 .ft-more {
+  margin-top: 6px;
   padding: 0 0 6px 6px;
   color: var(--nt-gray-text);
   font-weight: 500;

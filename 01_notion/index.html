@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="hover.css" />
   </head>
   <body>
     <header>
@@ -26,7 +27,7 @@
         <a class="nav-menu" href="#">영업팀 문의하기</a>
       </div>
       <div class="hd-right">
-        <a href="#">로그아웃하기</a>
+        <a class="login" href="#">로그아웃하기</a>
         <button><a href="#" class="hd-btn">Notion 열기</a></button>
       </div>
     </header>
@@ -44,7 +45,9 @@
             <h1>하는 곳</h1>
           </div>
         </div>
-        <p class="mt-p">팀을 위해 구축된 AI로 맥락을 파악하고, 답을 찾고, 작업을 자동화하세요</p>
+        <p class="mt-p">
+          팀을 위해 구축된 AI로 맥락을 파악하고, 답을 찾고, 작업을 자동화하세요
+        </p>
         <div class="mh-buttons">
           <button class="btn1"><a href="#">Notion 무료로 사용하기</a></button>
           <button class="btn2"><a href="#">데모 요청하기</a></button>
@@ -52,7 +55,13 @@
       </div>
 
       <div class="main-v">
-        <video src="../notion_icons/main_video.mp4" autoplay loop muted playsinline></video>
+        <video
+          src="../notion_icons/main_video.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
       </div>
       <div class="main-c">
         <p>가장 야심찬 기업들이 Notion을 사용하고 있습니다.</p>
@@ -62,7 +71,10 @@
             <span class="company-dot">●</span>
           </div>
           <div class="company">
-            <img src="../notion_icons/company/2. kakaostyle.svg" alt="kakaostyle" />
+            <img
+              src="../notion_icons/company/2. kakaostyle.svg"
+              alt="kakaostyle"
+            />
             <span class="company-dot">●</span>
           </div>
           <div class="company">
@@ -78,7 +90,10 @@
             <span class="company-dot">●</span>
           </div>
           <div class="company">
-            <img src="../notion_icons/company/6. devsisters.svg" alt="devsisters" />
+            <img
+              src="../notion_icons/company/6. devsisters.svg"
+              alt="devsisters"
+            />
             <span class="company-dot">●</span>
           </div>
           <div class="company">
@@ -134,9 +149,21 @@
               <span class="card-btn">&#10132;</span>
             </div>
             <div class="card-img">
-              <img class="ci-1" src="../notion_icons/card_img/knowledge/1.webp" alt="1" />
-              <img class="ci-1" src="../notion_icons/card_img/knowledge/2.webp" alt="2" />
-              <img class="ci-3" src="../notion_icons/card_img/knowledge/3.webp" alt="3" />
+              <img
+                class="ci-1"
+                src="../notion_icons/card_img/knowledge/1.webp"
+                alt="1"
+              />
+              <img
+                class="ci-2"
+                src="../notion_icons/card_img/knowledge/2.webp"
+                alt="2"
+              />
+              <img
+                class="ci-3"
+                src="../notion_icons/card_img/knowledge/3.webp"
+                alt="3"
+              />
             </div>
           </div>
           <div class="card">
@@ -146,9 +173,21 @@
               <span class="card-btn">&#10132;</span>
             </div>
             <div class="card-img">
-              <img class="ci-1" src="../notion_icons/card_img/answer/1.webp" alt="1" />
-              <img class="ci-4" src="../notion_icons/card_img/answer/2.webp" alt="2" />
-              <img class="ci-3" src="../notion_icons/card_img/answer/3.webp" alt="3" />
+              <img
+                class="ci-1"
+                src="../notion_icons/card_img/answer/1.webp"
+                alt="1"
+              />
+              <img
+                class="ci-4"
+                src="../notion_icons/card_img/answer/2.webp"
+                alt="2"
+              />
+              <img
+                class="ci-3"
+                src="../notion_icons/card_img/answer/3.webp"
+                alt="3"
+              />
             </div>
           </div>
         </div>
@@ -156,13 +195,24 @@
           <div class="third-text">
             <p class="card-title">번거로운 작업 자동화</p>
             <div class="third-desc">
-              <h2>에이전트를 사용해 24시간 연중무휴 업무를 처리하세요.</h2>
+              <h2>
+                에이전트를 사용해 24시간
+                <span class="break-line">연중무휴 업무를 처리하세요.</span>
+              </h2>
               <p class="card-btn">&#10132;</p>
             </div>
           </div>
           <div class="third-img">
-            <img class="ti-1" src="../notion_icons/card_img/auto/1.webp" alt="1" />
-            <img class="ti-2" src="../notion_icons/card_img/auto/2.webp" alt="2" />
+            <img
+              class="ti-1"
+              src="../notion_icons/card_img/auto/1.webp"
+              alt="1"
+            />
+            <img
+              class="ti-2"
+              src="../notion_icons/card_img/auto/2.webp"
+              alt="2"
+            />
           </div>
         </div>
         <div class="works">
@@ -174,11 +224,17 @@
             </div>
             <div class="work">
               <div class="work-icon yellow"></div>
-              <a class="work-link" href="#">Slack에서 지원 티켓 해결 &#10132;</a>
+              <a class="work-link" href="#"
+                >Slack에서 지원<span class="break-line">
+                  티켓 해결 &#10132;</span
+                ></a
+              >
             </div>
             <div class="work">
               <div class="work-icon red"></div>
-              <a class="work-link line" href="#">보안 경고에 더 빠르게 대응 &#10132;</a>
+              <a class="work-link line" href="#"
+                >보안 경고에 더 빠르게 대응 &#10132;</a
+              >
             </div>
             <div class="work">
               <div class="work-icon green"></div>
@@ -186,7 +242,9 @@
             </div>
             <div class="work">
               <div class="work-icon deepblue"></div>
-              <a class="work-link" href="#">나만의 개발자 도구 만들기 &#10132;</a>
+              <a class="work-link line" href="#"
+                >나만의 개발자 도구 만들기 &#10132;</a
+              >
             </div>
           </div>
         </div>
@@ -202,8 +260,8 @@
               <img src="../notion_icons/people/Cursor_white.svg" alt="로고" />
               <div class="team-desc-text">
                 <p class="interview">
-                  "Notion 같은 AI네이티브 툴은 중요한 경쟁력이 되어 줍니다. 작은 규모를 유지하면서도 더 많은
-                  성과를 낼 수있으니까요."
+                  "Notion 같은 AI네이티브 툴은 중요한 경쟁력이 되어 줍니다. 작은
+                  규모를 유지하면서도 더 많은 성과를 낼 수있으니까요."
                 </p>
                 <p class="interview-info">Michael Truell, 공동 창업자 겸 CEO</p>
               </div>
@@ -214,13 +272,18 @@
             <div class="team-bg blue"></div>
             <div class="team-bg2 blue"></div>
             <div class="team-desc">
-              <img src="../notion_icons/people/Company_faire_white.svg" alt="로고" />
+              <img
+                src="../notion_icons/people/Company_faire_white.svg"
+                alt="로고"
+              />
               <div class="team-desc-text">
                 <p class="interview">
-                  "Notion의 세심한 디자인은 협업과 의사결정을 가속화하여 고객에게 더 빠르게 영향을 미칠 수
-                  있도록 해줍니다."
+                  "Notion의 세심한 디자인은 협업과 의사결정을 가속화하여
+                  고객에게 더 빠르게 영향을 미칠 수 있도록 해줍니다."
                 </p>
-                <p class="interview-info">Renee Solorzano, 시니어 제품 디자인 이사</p>
+                <p class="interview-info">
+                  Renee Solorzano, 시니어 제품 디자인 이사
+                </p>
               </div>
             </div>
           </div>
@@ -232,8 +295,8 @@
               <img src="../notion_icons/people/ramp_white.svg" alt="로고" />
               <div class="team-desc-text">
                 <p class="interview">
-                  "Notion 커스텀 에이전트는 팀이 AI로 작업을 하는 것을 넘어 팀을 대신해 작업하는 AI 도구를
-                  구축하도록 돕습니다."
+                  "Notion 커스텀 에이전트는 팀이 AI로 작업을 하는 것을 넘어 팀을
+                  대신해 작업하는 AI 도구를 구축하도록 돕습니다."
                 </p>
                 <p class="interview-info">Ben Levick, 운영 및 내부 AI 책임자</p>
               </div>

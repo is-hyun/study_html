@@ -32,7 +32,7 @@ a {
 }
 /* 헤더 */
 header {
-  /* background-color: red; */
+  background-color: white;
   color: var(--nt-menu-text);
   width: 100vw;
   height: 64px;
@@ -46,6 +46,10 @@ header {
 
   /* nav 중앙 정렬 */
   position: relative;
+
+  /* 헤더 상단 고정 */
+  position: sticky;
+  top: 0;
 }
 .logo {
   display: flex;
@@ -56,7 +60,7 @@ header {
   height: 36px;
 }
 .nav {
-  width: 312px;
+  width: 318px;
   display: flex;
   /* gap: 21px; */
   justify-content: space-between;
@@ -72,15 +76,20 @@ header {
   justify-content: center;
   align-items: center;
   gap: 6px;
-
+  padding: 6px 9px;
+  border-radius: 6px;
   color: var(--nt-menu-text);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
+  transition: background-color 0.3s ease;
 }
 .nav-toggle {
+  width: 15px;
   font-size: 15px;
-  font-weight: 400px;
-  transform: rotate(-90deg) scaleY(2) translateX(-2px);
+  font-weight: 600 !important;
+  text-align: center;
+  transform: rotate(-90deg) scaleY(1.2) scaleX(0.7) translateX(-1px);
+  /* transition: transform 0.3s ease; */
 }
 .hd-right {
   display: flex;
@@ -91,11 +100,17 @@ header {
   font-size: 15px;
   font-weight: 400;
 }
+.login {
+  padding: 6px 9px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
 .hd-right button {
   background-color: var(--nt-blue);
   border: none;
   border-radius: 8px;
   padding: 6px 15px;
+  transition: background-color 0.3s ease;
 }
 .hd-btn {
   color: white;

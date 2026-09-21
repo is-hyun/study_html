@@ -6,13 +6,13 @@
   
   // 네비게이션(탐색기)을 포함한 VSCode 전체 화면의 확대 비율을 설정합니다.
   // 1은 약 20% 확대, 2는 약 40% 확대를 의미하며 0이 기본값입니다.
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
 
 
   // --- Live Server (실시간 미리보기) 관련 설정 ---
   
   // 브라우저를 띄울 때 사용할 기본 포트 번호를 5500으로 지정합니다.
-  "liveServer.settings.port": 5501,
+  "liveServer.settings.port": 5500,
   
   // 오른쪽 아래에 자잘하게 뜨는 Live Server 알림 메시지를 숨겨서 화면을 깔끔하게 씁니다.
   "liveServer.settings.donotShowInfoMsg": true,
