@@ -82,12 +82,16 @@ footer {
   padding: 0 0 6px 6px;
   font-weight: 500;
   word-break: keep-all;
+  transition: text-decoration 0.3s ease;
 }
 .ft-more {
   margin-top: 6px;
   padding: 0 0 6px 6px;
   color: var(--nt-gray-text);
   font-weight: 500;
+
+  transition: text-decoration 0.3s ease;
+  transition: color 0.3s ease;
 }
 .ft-right-bottom {
   display: flex;

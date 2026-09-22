@@ -140,10 +140,14 @@ main {
   gap: 9px;
   align-items: center;
   justify-content: center;
-  padding: 6px 9px;
+  padding: 6px 3px 6px 9px;
+  border-radius: 6px;
 
   width: 117px;
   height: 36px;
+
+  transition: background-color 0.2s ease;
+  margin-left: 12px;
 }
 .company img {
   display: block;
@@ -153,7 +157,7 @@ main {
 }
 .company-dot {
   font-size: 9px;
-  margin-right: 12px;
+  transition: color 0.2s ease;
 }
 
 /* 팀 업무 공간에서 바로 쓰는 AI */
@@ -172,17 +176,20 @@ main {
   /* background-color: powderblue; */
   width: 100%;
   display: flex;
+  gap: 30px;
   justify-content: space-between;
 }
 .card {
+  flex: 1;
   background-color: var(--nt-card);
   border-radius: 9px;
-  width: 612px;
-  height: 567px;
+  /* width: 612px; */
+  /* height: 567px; */
   padding: 24px;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
 
   overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 .card-title {
   margin-bottom: 6px;
@@ -206,6 +213,7 @@ main {
   bottom: 0;
   max-width: 100%;
   position: absolute;
+  cursor: pointer !important;
 }
 .ci-1 {
   height: auto;
@@ -229,11 +237,13 @@ main {
   filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.1));
 }
 .third {
+  flex: none;
   width: 100% !important;
   height: 375px !important;
   display: flex;
   justify-content: space-between;
-  margin-bottom: px;
+  margin-bottom: 27px;
+  transition: box-shadow 0.3s ease;
 }
 .third-text {
   display: flex;
@@ -251,7 +261,6 @@ main {
   width: 762px;
   transform: translate(24px, 24px);
   /* overflow: hidden; */
-
   position: relative;
 }
 .third-img img {
@@ -260,6 +269,7 @@ main {
   border-radius: 9px;
   width: 450px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  cursor: pointer !important;
 }
 .ti-1 {
   left: 0;
@@ -305,6 +315,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  transition: box-shadow 0.3s ease;
 }
 .work-icon {
   width: 39px;
@@ -358,6 +370,7 @@ main {
   border-radius: 12px;
 
   position: relative;
+  overflow: hidden;
 }
 .team-card img {
   display: block;
@@ -365,6 +378,8 @@ main {
   height: 100%;
   border-radius: 12px;
   filter: grayscale(50%) brightness(1.2);
+
+  transition: transform 0.2s ease;
 }
 .team-bg {
   position: absolute;
@@ -465,13 +480,18 @@ main {
   font-size: 18px;
   font-weight: 900px;
 }
-.bbtn-1,
-.bbtn-1 a {
+.bbtn-1 {
   background-color: var(--nt-blue);
+  transition: background-color 0.2s ease;
+}
+.bbtn-1 a {
   color: white;
 }
-.bbtn-2,
-.bbtn-2 a {
+.bbtn-2 {
   background-color: white;
+  transition: background-color 0.2s ease;
+}
+.bbtn-2 a {
   color: var(--nt-blue);
+  transition: color 0.2s ease;
 }

@@ -20,6 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: default;
 }
 body {
   background-color: white;
@@ -29,6 +30,7 @@ body {
 a {
   text-decoration: none;
   color: var(--nt-black-text);
+  cursor: pointer;
 }
 /* 헤더 */
 header {
@@ -50,6 +52,7 @@ header {
   /* 헤더 상단 고정 */
   position: sticky;
   top: 0;
+  z-index: 9999;
 }
 .logo {
   display: flex;
@@ -58,6 +61,7 @@ header {
 .logo img {
   width: 36px;
   height: 36px;
+  cursor: pointer !important;
 }
 .nav {
   width: 318px;
@@ -88,7 +92,7 @@ header {
   font-size: 15px;
   font-weight: 600 !important;
   text-align: center;
-  transform: rotate(-90deg) scaleY(1.2) scaleX(0.7) translateX(-1px);
+  transform: rotate(-90deg) scaleY(1.2) scaleX(0.7);
   /* transition: transform 0.3s ease; */
 }
 .hd-right {

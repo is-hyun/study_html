@@ -1,11 +1,12 @@
 :root {
   --nt-hover: #f2f2f2;
   --nt-lightblue-hover: #f2f9ff;
+  --nt-company-hover: #f6f5f4;
 }
 .nav-menu:hover {
   background-color: var(--nt-hover);
   .nav-toggle {
-    transform: rotate(90deg) scaleY(1.2) scaleX(0.7) translateX(1px);
+    transform: rotate(90deg) scaleY(1.2) scaleX(0.7) translateX(2px);
   }
 }
 /* 로그아웃하기 */
@@ -16,11 +17,50 @@
   background-color: var(--nt-blue-hover);
 }
 
-.btn1:hover {
+.btn1:hover,
+.bbtn-1:hover {
   background-color: var(--nt-blue-hover);
-  cursor: pointer;
+  cursor: pointer !important;
 }
 .btn2:hover {
   background-color: var(--nt-lightblue-hover);
-  cursor: pointer;
+  cursor: pointer !important;
+}
+
+.company.hv:hover {
+  background-color: var(--nt-company-hover);
+  .company-dot {
+    color: var(--nt-blue);
+  }
+  cursor: pointer !important;
+}
+
+.card:hover,
+.third:hover {
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer !important;
+}
+.work:hover {
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+  cursor: pointer !important;
+}
+.team-card:hover > img {
+  transform: scale(1.03);
+  cursor: pointer !important;
+}
+.bbtn-2:hover {
+  background-color: #dfdcd9;
+  > a {
+    color: var(--nt-black-text) !important;
+  }
+}
+
+.ft-list p:hover,
+.underline:hover {
+  text-decoration: underline;
+  cursor: pointer !important;
+}
+.ft-more:hover {
+  text-decoration: underline;
+  color: #333;
 }
