@@ -184,7 +184,7 @@ main {
   background-color: var(--nt-card);
   border-radius: 9px;
   /* width: 612px; */
-  /* height: 567px; */
+  height: 567px;
   padding: 24px;
   margin-bottom: 30px;
 
