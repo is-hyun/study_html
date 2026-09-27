@@ -1,0 +1,80 @@
+.my-playlist {
+  flex: 1;
+  background: var(--ms-bg);
+  padding: 30px;
+  height: 100%;
+  overflow: auto;
+}
+.my-playlist h2 {
+  color: var(--ms-darkgreen);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.mpl-cards {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+.mpl-card {
+  background-color: var(--ms-lightgreen);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+.mpl-left {
+  max-width: 80%;
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+  align-items: center;
+}
+.mpl-thumb {
+  border-radius: 6px;
+}
+.mpl-text {
+  width: 100%;
+  height: 50px;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+.mpl-name {
+  color: var(--ms-white);
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.mpl-info {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.mpl-right {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--ms-white);
+}
+.mpl-card.active-card {
+  background-color: var(--ms-darkgreen) !important; /* 클릭된 카드는 진한 녹색으로 */
+  .mpl-info {
+    color: var(--ms-white);
+  }
+}
+.mpl-card:not(.active-card):hover {
+  background-color: var(--ms-lightgreen-hover);
+  box-shadow: 0 4px 9px rgba(95, 111, 82, 0.6);
+}

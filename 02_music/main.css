@@ -1,0 +1,56 @@
+.main-content {
+  flex: 1;
+  background: var(--ms-bg);
+  padding: 30px;
+  height: 100%;
+  overflow: auto;
+}
+.main-content h2 {
+  color: var(--ms-darkgreen);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.album-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.album-card {
+  flex: 0 1 calc((100% - (16px * 5)) / 6);
+  max-width: 200px;
+  min-width: 160px;
+
+  background-color: var(--ms-lightgreen);
+  padding: 15px;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+.thumb {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+.a-name {
+  color: var(--sp-white);
+  font-size: 14px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.a-artist {
+  color: var(--sp-white);
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.album-card:hover {
+  background-color: var(--ms-lightgreen-hover);
+  box-shadow: 0 4px 9px rgba(95, 111, 82, 0.6);
+}
