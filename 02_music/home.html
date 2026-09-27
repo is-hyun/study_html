@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone Coding</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <a href="home.html"><h1 class="logo">MUSIC</h1></a>
+        <nav class="nav-menu">
+          <a href="home.html" class="nav-item active">홈</a>
+          <a href="#" class="nav-item">검색</a>
+          <a href="#" class="nav-item">라이브러리</a>
+        </nav>
+        <div class="playlist">
+          <h3>내 플레이리스트</h3>
+          <a href="mypli_jpop.html" class="pl-item">J-POP</a>
+          <a href="mypli_kpop.html" class="pl-item">K-POP</a>
+          <a href="#" class="pl-item">POP-SONG</a>
+          <a href="#" class="pl-item">mood</a>
+          <a href="#" class="pl-item">bgm_pli</a>
+        </div>
+      </aside>
+      <main class="main-content">
+        <h2>인기곡</h2>
+        <div class="album-grid">
+          <div class="album-card">
+            <img class="thumb" src="https://picsum.photos/id/122/200/200" alt="앨범표지" />
+            <h4 class="a-name">Dear my crazy soulmate</h4>
+            <p class="a-artist">아이유</p>
+          </div>
+          <div class="album-card">
+            <img class="thumb" src="https://picsum.photos/id/111/200/200" alt="앨범표지" />
+            <h4 class="a-name">퇴사할게요 (Narr. 기안84)</h4>
+            <p class="a-artist">소연 (SOYEON)</p>
+          </div>
+          <div class="album-card">
+            <img class="thumb" src="https://picsum.photos/id/15/200/200" alt="앨범표지" />
+            <h4 class="a-name">BAD</h4>
+            <p class="a-artist">ATEEZ</p>
+          </div>
+          <div class="album-card">
+            <img class="thumb" src="https://picsum.photos/id/655/200/200" alt="앨범표지" />
+            <h4 class="a-name">LOVE ATTACK</h4>
+            <p class="a-artist">RESCENE (리센느)</p>
+          </div>
+          <div class="album-card">
+            <img class="thumb" src="https://picsum.photos/id/355/200/200" alt="앨범표지" />
+            <h4 class="a-name">Skibidi</h4>
+            <p class="a-artist">효리수</p>
+          </div>
+          <div class="album-card">
+            <img class="thumb" src="https://picsum.photos/id/33/200/200" alt="앨범표지" />
+            <h4 class="a-name">Guitarist</h4>
+            <p class="a-artist">도경수</p>
+          </div>
+          <div class="album-card">
+            <img class="thumb" src="https://picsum.photos/id/99/200/200" alt="앨범표지" />
+            <h4 class="a-name">만찬가</h4>
+            <p class="a-artist">태연 (TAEYEON)</p>
+          </div>
+          <div class="album-card">
+            <img class="thumb" src="https://picsum.photos/id/92/200/200" alt="앨범표지" />
+            <h4 class="a-name">푸른 산호초</h4>
+            <p class="a-artist">이수현</p>
+          </div>
+          <div class="album-card">
+            <img class="thumb" src="https://picsum.photos/id/88/200/200" alt="앨범표지" />
+            <h4 class="a-name">꿈꾸던 어른이 되었나요?</h4>
+            <p class="a-artist">머무르</p>
+          </div>
+          <div class="album-card">
+            <img class="thumb" src="https://picsum.photos/id/123/200/200" alt="앨범표지" />
+            <h4 class="a-name">Pretty Girl</h4>
+            <p class="a-artist">RESCENE (리센느)</p>
+          </div>
+          <div class="album-card">
+            <img class="thumb" src="https://picsum.photos/id/22/200/200" alt="앨범표지" />
+            <h4 class="a-name">LEMONADE</h4>
+            <p class="a-artist">aespa</p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="player">
+      <div class="pl-info">
+        <img src="https://picsum.photos/id/222/50/50" alt="앨범표지" />
+        <div class="pl-text">
+          <p class="song-title">Walking with you</p>
+          <p class="song-artist">Novelbright</p>
+        </div>
+      </div>
+      <div class="pl-controls">
+        <button>&#9664;&#9664;</button>
+        <button class="play-btn">&#9654;</button>
+        <button>&#9654;&#9654;</button>
+      </div>
+      <div class="pl-bar">
+        <div class="progress"></div>
+      </div>
+    </div>
+    <script src="player.js"></script>
+  </body>
+</html>
