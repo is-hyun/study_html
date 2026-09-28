@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let targetTitle = savedTitle;
 
-  // localStorage에 저장된 값이 없다면 HTML에 적힌 기본 플레이어 정보를 기준으로 삼음
+  // localStorage에 저장된 값이 없다면 HTML에 적힌 기본 플레이어 정보를 기준
   if (!savedTitle || !savedArtist || !savedImgSrc) {
     targetTitle = playerTitle.innerText; // 기본값 ("Walking with you")
   } else {
-    // 저장된 값이 있으면 플레이어 UI를 그 정보로 세팅
+    // 저장된 값이 있으면 해당 값으로 세팅
     playerTitle.innerText = savedTitle;
     playerArtist.innerText = savedArtist;
     playerImg.src = savedImgSrc;
@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 2. 노래 카드 클릭 이벤트
+  // 2. 카드 클릭 이벤트
   cards.forEach((card) => {
     card.addEventListener("click", () => {
-      // 기존에 활성화 해제
+      // 기존 활성화 해제
       const currentActive = document.querySelector(".mpl-card.active-card");
       if (currentActive) {
         currentActive.classList.remove("active-card");
