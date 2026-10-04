@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "JeonnamEducationYuna";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-1@1.0/JNE-Yuna-TTF-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cafe24LovingU";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Lovingu.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+body {
+  background: linear-gradient(180deg, #e0f7fa 0%, #80deea 70%, #4ae3f5 100%) !important;
+  font-family: "JeonnamEducationYuna";
+  letter-spacing: 2px;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 🌊 파도 기본 세팅 (크기를 400vw로 키워 가장자리 깨짐을 원천 차단합니다) */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+
+  /* 🌟 핵심 수정 1: 가로폭이 넓어져도 파도가 거대해지지 않도록, 
+     파도의 가로·세로 지름 크기를 화면 높이(vh) 기준으로 완전하게 일치시킵니다. */
+  width: 500vh;
+  height: 500vh;
+
+  /* 🌟 핵심 수정 2: 세로 높이를 기준으로 원을 배치하기 위해 상단 기준점을 잡습니다. */
+  left: 50%;
+  top: 95vh;
+
+  /* 🌟 핵심 수정 3: 완벽한 제자리 회전을 위한 정중앙 축 고정 */
+  transform-origin: center center;
+
+  /* 🌟 핵심 수정 4: 이제 파도가 세로 높이 기준으로만 움직이기 때문에,
+     아래 공식을 사용하면 창 가로폭을 늘리든 줄이든 명함 밑 일정한 높이에 완벽하게 고정됩니다. */
+  transform: translate(-50%, -8%);
+
+  border-radius: 43%;
+  z-index: -1;
+}
+
+/* 🌊 1번 파도 (뒤쪽 연한 에메랄드빛) */
+body::before {
+  left: 40%;
+  background-color: rgba(255, 255, 255, 0.35);
+  animation: realWave 26s infinite linear;
+}
+
+/* 🌊 2번 파도 (앞쪽 하얀 거품 파도) */
+body::after {
+  left: 60%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 40%;
+  transform: translate(-50%, -6%) rotate(60deg); /* 엇박자 높이 수치 수정 */
+  animation: realWaveReverse 22s infinite linear;
+}
+
+/* 🔄 1번 파도 대본 */
+@keyframes realWave {
+  0% {
+    transform: translate(-50%, -8%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -8%) rotate(360deg);
+  }
+}
+
+/* 🔄 2번 파도 대본 */
+@keyframes realWaveReverse {
+  0% {
+    transform: translate(-50%, -6%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -6%) rotate(0deg);
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.card {
+  width: 540px;
+  height: 300px;
+  padding: 21px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.6);
+
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+.card.flip {
+  transform: rotateY(180deg);
+  box-shadow: -6px 6px 15px rgba(0, 0, 0, 0.5);
+}
+.front,
+.back {
+  top: 21px;
+  left: 21px;
+  right: 21px;
+  bottom: 21px;
+
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  display: flex;
+  justify-content: center;
+  /* background-color: beige; */
+
+  transform: rotateY(0deg);
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* position: relative; */
+}
+.logo-out {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: blue 5px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+}
+.logo-in {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: blue 5px solid;
+  opacity: 0.5;
+}
+.info {
+  font-size: 18px;
+  font-weight: 500;
+  /* position: relative; */
+}
+
+.dropdown-container {
+  display: none;
+  position: absolute;
+  right: 35px;
+  bottom: 10px;
+  opacity: 0.6;
+}
+.dropdown {
+  display: flex;
+  align-items: end;
+}
+.tag {
+  color: white;
+  font-size: 21px;
+  margin-bottom: 21px;
+  margin-right: -6px;
+}
+.skills {
+  display: flex;
+  gap: 3px;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: white;
+  padding: 6px;
+  border-radius: 9px;
+}
+.skill {
+  background-color: aqua;
+  padding: 2px 9px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.company {
+  position: absolute;
+  font-weight: bold;
+  letter-spacing: 2px;
+  /* -webkit-text-stroke: 5px rgba(255, 255, 255, 0.3); */
+
+  font-family: "Cafe24LovingU" !important;
+  letter-spacing: 4px;
+}
+.fc {
+  top: 90px;
+  width: 300px;
+  font-size: 28px;
+}
+
+/* 뒷면 */
+.back {
+  /* background-color: azure; */
+  display: flex;
+
+  transform: rotateY(180deg);
+}
+.back-left {
+  flex: 3;
+  /* background-color: rebeccapurple; */
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid bisque;
+  padding-right: 21px;
+  padding-bottom: 21px;
+  position: relative;
+}
+.back-info {
+  font-family: "Cafe24LovingU" !important;
+  letter-spacing: 4px;
+  font-weight: 400;
+  font-size: 21px;
+  /* font-style: italic */
+}
+.bl {
+  margin: auto;
+}
+.logo-out.bl {
+  width: 120px;
+  height: 120px;
+}
+.logo-in.bl {
+  width: 80px;
+  height: 80px;
+}
+.blc {
+  width: 90%;
+  left: 0;
+  text-align: center;
+  top: 115px !important;
+  font-size: 21px;
+}
+.back-right {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.br-mid {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 3px;
+  font-size: 15px;
+}
+.br-mid p {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.title {
+  font-family: "Cafe24LovingU";
+  font-size: 18px;
+  letter-spacing: 2px !important;
+  margin-right: 6px;
+  font-weight: 500;
+}
+.myname {
+  font-family: "JeonnamEducationYuna" !important;
+  letter-spacing: 9px;
+  /* background-color: beige; */
+}
+.br-mid a {
+  text-decoration: none;
+  color: black;
+}
+.br-top {
+  display: flex;
+  justify-content: right;
+}
+.br-bottom {
+  display: flex;
+  justify-content: right;
+  align-items: end;
+  gap: 6px;
+  margin-top: auto;
+}
+.br-bottom p {
+  font-style: italic;
+  font-size: 12px;
+}
+.qr {
+  width: 60px;
+  height: 60px;
+}
+.dev:hover {
+  font-style: italic;
+  text-decoration: underline;
+}
+/* 호버 드롭 다운 */
+.dev:hover + .dropdown-container {
+  display: flex;
+}
+.dropdown-container:hover {
+  display: flex;
+  cursor: pointer;
+  .skill:hover {
+    background-color: blue;
+    color: white;
+  }
+}

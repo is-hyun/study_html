@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나만의 명함</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="front">
+          <div class="main">
+            <div class="logo-out">
+              <div class="logo-in"></div>
+            </div>
+            <div class="info">
+              <span class="name">Lee Suhyun</span>
+              <span>&middot;</span>
+              <span class="dev">Fullstack Developer</span>
+              <div class="dropdown-container">
+                <div class="dropdown">
+                  <span class="tag">◀</span>
+                  <div class="skills">
+                    <p class="skill">Java</p>
+                    <p class="skill">HTML</p>
+                    <p class="skill">CSS</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="company fc">
+              <h2>Korea Academy</h2>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="back-left">
+            <h4 class="back-info">Information</h4>
+            <div class="logo-out bl">
+              <div class="logo-in bl"></div>
+            </div>
+            <div class="company blc">
+              <h2>Korea Academy</h2>
+            </div>
+          </div>
+          <div class="back-right">
+            <div class="br-top">
+              <img class="profile" src="https://picsum.photos/id/222/90/90" alt="사진" />
+            </div>
+            <div class="br-mid">
+              <p class="name"><span class="title">name : </span><span class="myname">이수현</span></p>
+              <p><span class="title">web : </span><a href="https://github.com/is-hyun" title="클릭으로 이동하기" target="_blank">https://github.com/is-hyun</a></p>
+              <p class="phone"><span class="title">phone : </span>010-1234-0909</p>
+              <p class="email"><span class="title">email : </span>i.suhyun@sample.com</p>
+            </div>
+            <div class="br-bottom">
+              <p>portfolio QR</p>
+              <img class="qr" src="../image/github_qr.png" alt="QR" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // 1. 클릭 감지
+      const card = document.querySelector(".card");
+
+      // 2. 이벤트
+      card.addEventListener("click", function () {
+        card.classList.toggle("flip");
+      });
+    </script>
+  </body>
+</html>
