@@ -19,59 +19,63 @@
   font-display: swap;
 }
 body {
-  background: linear-gradient(180deg, #e0f7fa 0%, #80deea 70%, #4ae3f5 100%) !important;
   font-family: "JeonnamEducationYuna";
   letter-spacing: 2px;
+
+  /* 화면 꽉 채우기 */
   min-height: 100vh;
   margin: 0;
+  /* 그라데이션 배경 */
+  background: linear-gradient(180deg, #e0f7fa 0%, #80deea 70%, #4ae3f5 100%) !important;
+  /* 스크롤바 생성 방지 */
   overflow: hidden;
+  /* before, after 기준 */
   position: relative;
 }
 
-/* 🌊 파도 기본 세팅 (크기를 400vw로 키워 가장자리 깨짐을 원천 차단합니다) */
 body::before,
 body::after {
   content: "";
   position: absolute;
 
-  /* 🌟 핵심 수정 1: 가로폭이 넓어져도 파도가 거대해지지 않도록, 
-     파도의 가로·세로 지름 크기를 화면 높이(vh) 기준으로 완전하게 일치시킵니다. */
+  /* 화면보다 큰 가상 요소 설정 */
   width: 500vh;
   height: 500vh;
-
-  /* 🌟 핵심 수정 2: 세로 높이를 기준으로 원을 배치하기 위해 상단 기준점을 잡습니다. */
   left: 50%;
   top: 95vh;
 
-  /* 🌟 핵심 수정 3: 완벽한 제자리 회전을 위한 정중앙 축 고정 */
-  transform-origin: center center;
-
-  /* 🌟 핵심 수정 4: 이제 파도가 세로 높이 기준으로만 움직이기 때문에,
-     아래 공식을 사용하면 창 가로폭을 늘리든 줄이든 명함 밑 일정한 높이에 완벽하게 고정됩니다. */
-  transform: translate(-50%, -8%);
-
+  /* 찌그러진 사각형을 회전 */
   border-radius: 43%;
+  /* 도형의 중심을 회전축으로 지정 */
+  transform-origin: center center;
+  transform: translate(-50%, -8%);
   z-index: -1;
 }
 
-/* 🌊 1번 파도 (뒤쪽 연한 에메랄드빛) */
+/* 1번 파도 */
 body::before {
   left: 40%;
   background-color: rgba(255, 255, 255, 0.35);
   animation: realWave 26s infinite linear;
 }
 
-/* 🌊 2번 파도 (앞쪽 하얀 거품 파도) */
+/* 2번 파도 */
 body::after {
   left: 60%;
   background-color: rgba(255, 255, 255, 0.6);
+  /* 찌그러진 정도를 다르게 지정 */
   border-radius: 40%;
-  transform: translate(-50%, -6%) rotate(60deg); /* 엇박자 높이 수치 수정 */
+  /* 1번 파도와 시작 각도를 다르게 두기 */
+  transform: translate(-50%, -6%) rotate(60deg);
+  /* infinite - 무한 반복 */
+  /* linear - 일정한 속도 */
   animation: realWaveReverse 22s infinite linear;
 }
 
-/* 🔄 1번 파도 대본 */
+/* 1번 파도 */
 @keyframes realWave {
+  /* 프레임 처음과 끝 지정 */
+  /* 나머지는 브라우저가 채움 */
   0% {
     transform: translate(-50%, -8%) rotate(0deg);
   }
@@ -80,7 +84,7 @@ body::after {
   }
 }
 
-/* 🔄 2번 파도 대본 */
+/* 2번 파도 */
 @keyframes realWaveReverse {
   0% {
     transform: translate(-50%, -6%) rotate(360deg);
@@ -89,7 +93,7 @@ body::after {
     transform: translate(-50%, -6%) rotate(0deg);
   }
 }
-
+/* -------------------------------------------------- */
 .container {
   display: flex;
   justify-content: center;
@@ -128,7 +132,6 @@ body::after {
 .front {
   display: flex;
   justify-content: center;
-  /* background-color: beige; */
 
   transform: rotateY(0deg);
 }
@@ -139,8 +142,6 @@ body::after {
   justify-content: center;
   align-items: center;
   text-align: center;
-
-  /* position: relative; */
 }
 .logo-out {
   width: 150px;
@@ -150,7 +151,6 @@ body::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* opacity: 0.6; */
 }
 .logo-in {
   width: 100px;
@@ -162,7 +162,6 @@ body::after {
 .info {
   font-size: 18px;
   font-weight: 500;
-  /* position: relative; */
   color: var(--bc-font);
 }
 
@@ -171,11 +170,12 @@ body::after {
   position: absolute;
   right: 36px;
   bottom: 9px;
+
+  border-left: 6px solid transparent;
 }
 .dropdown {
   display: flex;
   align-items: end;
-  /* opacity: 0.8; */
 }
 .tag {
   color: #ade8f4;
@@ -202,9 +202,7 @@ body::after {
 }
 .company {
   position: absolute;
-  /* -webkit-text-stroke: 5px rgba(173, 232, 244, 0.3); */
   -webkit-text-stroke: 4px rgba(0, 150, 199, 0.2);
-  /* color: rgb(0, 150, 199); */
 
   font-family: "Cafe24LovingU" !important;
   font-weight: bold;
@@ -219,7 +217,6 @@ body::after {
 
 /* 뒷면 */
 .back {
-  /* background-color: azure; */
   display: flex;
 
   transform: rotateY(180deg);
@@ -227,7 +224,6 @@ body::after {
 }
 .back-left {
   flex: 3;
-  /* background-color: rebeccapurple; */
   display: flex;
   flex-direction: column;
   border-right: 1px solid #ade8f4;
@@ -240,7 +236,6 @@ body::after {
   letter-spacing: 4px;
   font-weight: 400;
   font-size: 21px;
-  /* font-style: italic */
 }
 .bl {
   margin: auto;
@@ -264,7 +259,6 @@ body::after {
   flex: 4;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
 }
 
 .br-mid {
@@ -290,7 +284,6 @@ body::after {
 .myname {
   font-family: "JeonnamEducationYuna" !important;
   letter-spacing: 9px;
-  /* background-color: beige; */
 }
 .br-mid a {
   text-decoration: none;
@@ -334,6 +327,7 @@ body::after {
     color: white;
   }
 }
+/* 드롭다운이 호버된 상태에서 변경된 dev CSS 유지 */
 .dev:has(+ .dropdown-container:hover) {
   font-style: italic;
 }
