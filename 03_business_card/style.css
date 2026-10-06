@@ -116,7 +116,7 @@ body::after {
 }
 .card.flip {
   transform: rotateY(180deg);
-  box-shadow: 6px 6px 15px rgba(4, 64, 138, 0.5);
+  box-shadow: -6px 6px 15px rgba(4, 64, 138, 0.5);
 }
 .front,
 .back {
