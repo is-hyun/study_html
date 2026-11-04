@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIGITAL CLOCK</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 시계와 콘텐츠를 하나의 덩어리로 묶어주는 부모 박스 -->
+    <div class="clock-wrapper">
+      <img class="clock" src="../image/clock.png" alt="배경" />
+
+      <!-- 흰색 원형 내부 영역 -->
+      <div class="container">
+        <h1 id="title">STOP WATCH</h1>
+        <button id="mode">MODE</button>
+
+        <!-- 가로·세로 정중앙에 올 고정 111px 디스플레이 -->
+        <div id="display-time">00:00:00.00</div>
+
+        <div class="btns">
+          <button id="start">START</button>
+          <button id="stop">STOP</button>
+          <button id="reset">RESET</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

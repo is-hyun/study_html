@@ -1,0 +1,124 @@
+:root {
+  --blue: #457b9d;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f1faee;
+  overflow: hidden;
+}
+
+/* 1. 시계 전체 */
+.clock-wrapper {
+  position: relative;
+  max-width: 600px;
+  width: 95%;
+  height: auto;
+}
+
+.clock {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 2. 시계 안쪽 영역 */
+.container {
+  position: absolute;
+  width: 61%;
+  height: 61%;
+  top: 54.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 3. 타이틀과 모드 버튼 */
+#title {
+  position: absolute;
+  top: 14%;
+  white-space: nowrap;
+  font-size: 52px;
+  font-weight: bold;
+}
+
+#title.timer-mode {
+  font-size: 56px;
+  top: 12%;
+  letter-spacing: 16px;
+  text-indent: 16px;
+}
+
+#mode {
+  position: absolute;
+  top: -16.5%;
+  white-space: nowrap;
+  cursor: pointer;
+
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  color: #a8dadc;
+  letter-spacing: 3px;
+  text-indent: 3px;
+  text-align: center;
+}
+#mode:hover {
+  cursor: pointer;
+}
+
+#display-time {
+  position: absolute;
+  top: 53.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 90px;
+  font-weight: bold;
+  white-space: nowrap;
+  line-height: 1;
+  text-align: center;
+}
+
+/* 5. 조작 버튼 */
+.btns {
+  position: absolute;
+  bottom: 12%;
+  display: flex;
+  gap: 24px;
+  white-space: nowrap;
+}
+
+/* 버튼 세부 조정 */
+.btns button {
+  width: 100px;
+  height: 44px;
+  padding: 12px 16px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background-color: var(--blue);
+}
+.btns button:hover {
+  background-color: #1d3557;
+  color: #a8dadc;
+}
