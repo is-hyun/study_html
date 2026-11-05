@@ -43,6 +43,7 @@ function renderDisplay() {
     let min = Math.floor((timerRemainingSeconds % 3600) / 60);
     let sec = timerRemainingSeconds % 60;
 
+    // padStart - 문자열에서 지정한 총 길이를 맞춰주는 자바스크립트 내장 함수
     hour = String(hour).padStart(2, "0");
     min = String(min).padStart(2, "0");
     sec = String(sec).padStart(2, "0");
@@ -74,9 +75,9 @@ function updateTimer() {
 // 2. 이벤트 리스너 설정
 // ==========================================
 
-// MODE 버튼 클릭: 스톱워치 <-> 타이머 모드 전환
+// MODE 버튼 클릭: 스톱워치 / 타이머 모드 전환
 modeBtn.addEventListener("click", () => {
-  if (isRunning) return; 
+  if (isRunning) return;
 
   if (currentMode === "STOP WATCH") {
     currentMode = "TIMER";
@@ -85,9 +86,8 @@ modeBtn.addEventListener("click", () => {
   } else {
     currentMode = "STOP WATCH";
     title.textContent = "STOP WATCH";
-    title.classList.remove("timer-mode");  
+    title.classList.remove("timer-mode");
   }
-  
   renderDisplay();
 });
 
@@ -99,8 +99,7 @@ startBtn.addEventListener("click", () => {
     swStartTime = Date.now() - swElapsedTime;
     swTimer = setInterval(updateStopwatch, 10);
   } else {
-    // 타이머가 0초라면 시작하지 않음
-    if (timerRemainingSeconds <= 0) return;
+    if (timerRemainingSeconds <= 0) return; // 타이머가 0초라면 시작하지 않음
     timerInterval = setInterval(updateTimer, 1000);
   }
   isRunning = true;
@@ -112,7 +111,6 @@ stopBtn.addEventListener("click", () => {
 
   if (currentMode === "STOP WATCH") {
     clearInterval(swTimer);
-    swElapsedTime = Date.now() - swStartTime;
   } else {
     clearInterval(timerInterval);
   }
@@ -131,7 +129,6 @@ resetBtn.addEventListener("click", () => {
     clearInterval(timerInterval);
     timerRemainingSeconds = TIMER_DEFAULT_SECONDS; // 5분(300초)으로 다시 복구
   }
-
   renderDisplay();
 });
 
